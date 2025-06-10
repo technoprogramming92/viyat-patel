@@ -11,6 +11,7 @@ import Header from "../components/Header.astro"
     <title>Shiva Designing Studio</title>
      <link rel="stylesheet" href="css/plugins.css" />
     <link rel="stylesheet" href="css/style.css" />
+	<slot name="head-extra" />
   </head>
   <body>
 	<!-- Preloader -->
@@ -45,6 +46,7 @@ import Header from "../components/Header.astro"
     <script is:inline src="js/YouTubePopUp.js"></script>
     <script is:inline src="js/before-after.js"></script>
     <script is:inline src="js/custom.js"></script>
+	<slot name="script-extra" />
   </body>
 </html>
 

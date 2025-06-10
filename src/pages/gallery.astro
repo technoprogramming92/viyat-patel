@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Test from "../components/gallery/Test.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout>
+  <Fragment slot="head-extra">
+    <link rel="stylesheet" href="/gallery-css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- <link rel="stylesheet" href="/css/style.css" /> -->
+  </Fragment>
+  <style>
+    .navbar-expand-lg .navbar-collapse {
+      display: flex !important;
+      flex-basis: auto;
+    }
+  </style>
+  <Test />
+  <div class="content-wrapper">
+    <Footer />
+  </div>
+  <Fragment slot="script-extra">
+    <script is:inline src="gallery-js/jquery.min.js"></script>
+    <script is:inline src="gallery-js/bootstrap.min.js"></script>
+    <script is:inline src="gallery-js/smoothscroll.js"></script>
+    <script is:inline src="gallery-js/jquery.validate.min.js"></script>
+    <script is:inline src="gallery-js/wow.min.js"></script>
+    <script is:inline src="gallery-js/jquery.stellar.min.js"></script>
+    <script is:inline src="gallery-js/jquery.magnific-popup.js"></script>
+    <script is:inline src="gallery-js/owl.carousel.min.js"></script>
+    <script is:inline src="gallery-js/interface.js"></script>
+
+    <script is:inline src="js/jquery-3.6.3.min.js"></script>
+    <script is:inline src="js/jquery-migrate-3.0.0.min.js"></script>
+    <script is:inline src="js/modernizr-2.6.2.min.js"></script>
+    <script is:inline src="js/imagesloaded.pkgd.min.js"></script>
+    <script is:inline src="js/jquery.isotope.v3.0.2.js"></script>
+    <script is:inline src="js/popper.min.js"></script>
+    <script is:inline src="js/bootstrap.min.js"></script>
+    <script is:inline src="js/scrollIt.min.js"></script>
+    <script is:inline src="js/jquery.waypoints.min.js"></script>
+    <script is:inline src="js/owl.carousel.min.js"></script>
+    <script is:inline src="js/jquery.stellar.min.js"></script>
+    <script is:inline src="js/jquery.magnific-popup.js"></script>
+    <script is:inline src="js/YouTubePopUp.js"></script>
+    <script is:inline src="js/before-after.js"></script>
+    <script is:inline src="js/custom.js"></script>
+  </Fragment>
+</Layout>
