@@ -560,7 +560,9 @@ blockquote cite:before {
     color: #fff;
 }
 .nav-scroll .logo-img {
-    width: 75px;
+    /* commented by saumya */
+    /* width: 75px; */
+    /* width:0px; */
 }
 .nav-scroll .logo {
     width: 75px;
@@ -639,7 +641,8 @@ blockquote cite:before {
     text-align: center;
 }
 .logo-img {
-    width: 75px;
+    /* width: 75px; */
+    width: 180px;
     margin-bottom: 5px;
 }
 
@@ -747,7 +750,7 @@ blockquote cite:before {
         background-color: transparent;
     }
     .nav-scroll .logo-img {
-        width: 75px;
+        /* width: 75px; */
     }
     .navbar .logo {
         text-align: left;
