@@ -1,0 +1,58 @@
+---
+import Header from "../components/Header.astro"
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Viyat Patel</title>
+     <link rel="stylesheet" href="css/plugins.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+	<!-- Preloader -->
+    <div class="preloader-bg"></div>
+    <div id="preloader">
+        <div id="preloader-status">
+            <div class="preloader-position loader"><span></span></div>
+        </div>
+    </div>
+
+    <!-- Progress scroll totop -->
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+	<Header/>
+    <slot />
+	<!-- <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> -->
+     <script is:inline src="js/jquery-3.6.3.min.js"></script>
+    <script is:inline src="js/jquery-migrate-3.0.0.min.js"></script>
+    <script is:inline src="js/modernizr-2.6.2.min.js"></script>
+    <script is:inline src="js/imagesloaded.pkgd.min.js"></script>
+    <script is:inline src="js/jquery.isotope.v3.0.2.js"></script>
+    <script is:inline src="js/popper.min.js"></script>
+    <script is:inline src="js/bootstrap.min.js"></script>
+    <script is:inline src="js/scrollIt.min.js"></script>
+    <script is:inline src="js/jquery.waypoints.min.js"></script>
+    <script is:inline src="js/owl.carousel.min.js"></script>
+    <script is:inline src="js/jquery.stellar.min.js"></script>
+    <script is:inline src="js/jquery.magnific-popup.js"></script>
+    <script is:inline src="js/YouTubePopUp.js"></script>
+    <script is:inline src="js/before-after.js"></script>
+    <script is:inline src="js/custom.js"></script>
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
