@@ -1,0 +1,33 @@
+---
+import Header2 from "../components/Header2.astro";
+import Footer2 from "../components/Footer2.astro";
+import Test2 from "../components/gallery/Test2.astro";
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Shiva Designing Studio</title>
+  </head>
+  <body>
+<Header2 />
+<Test2/>
+<Footer2/>
+
+</body>
+</html>
+
+<style>
+    @media screen and (max-width: 991px) {
+    .navbar {
+        padding-left: 0px;
+        padding-right: 0px;
+        background: #272727;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+</style>
