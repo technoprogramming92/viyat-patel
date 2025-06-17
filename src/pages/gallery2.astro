@@ -1,7 +1,7 @@
 ---
 import Header2 from "../components/Header2.astro";
+import GalleryComponent from "../components/gallery/GalleryComponent.astro";
 import Footer2 from "../components/Footer2.astro";
-import Test2 from "../components/gallery/Test2.astro";
 ---
 <!doctype html>
 <html lang="en">
@@ -14,20 +14,9 @@ import Test2 from "../components/gallery/Test2.astro";
   </head>
   <body>
 <Header2 />
-<Test2/>
+<GalleryComponent/>
 <Footer2/>
 
 </body>
 </html>
 
-<style>
-    @media screen and (max-width: 991px) {
-    .navbar {
-        padding-left: 0px;
-        padding-right: 0px;
-        background: #272727;
-        padding-top: 0px;
-        padding-bottom: 0px;
-    }
-}
-</style>

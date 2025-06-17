@@ -379,7 +379,7 @@ label.error{
 
 
 
-.loader{
+/* .loader{
   position: fixed;
   overflow: hidden;
   z-index: 100;
@@ -497,7 +497,7 @@ label.error{
             transform: perspective(140px) rotateY(180deg);
     opacity: 0; 
   }
-}
+} */
 
 
 
@@ -2475,11 +2475,11 @@ img.mfp-img{
   /* Navbar Mobile */
 
 
-  .navbar-mobile{
+  /* .navbar-mobile{
     position: absolute;
     left: -50000px;
     top: -50000px;
-  }
+  } */
 
 
 
