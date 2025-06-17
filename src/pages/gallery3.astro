@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/gallery/Hero.astro";
+import Test from "../components/gallery/Test.astro";
+import JsWrapper from "../components/gallery/JsWrapper.astro"
+import Footer from "../components/Footer.astro";
+---
+
+<Layout>
+  <Fragment slot="head-extra">
+    <link rel="stylesheet" href="/gallery-css/filtered.css" />
+    <!-- <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" /> -->
+  </Fragment>
+  
+    <Hero />
+  <Test />
+  <JsWrapper/>
+  <div class="content-wrapper">
+    <Footer />
+  </div>
+</Layout>

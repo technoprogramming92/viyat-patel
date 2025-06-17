@@ -1,22 +1,22 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Hero from "../components/gallery/Hero.astro";
-import Test from "../components/gallery/Test.astro";
-import JsWrapper from "../components/gallery/JsWrapper.astro"
-import Footer from "../components/Footer.astro";
+import Header2 from "../components/Header2.astro";
+import GalleryComponent from "../components/gallery/GalleryComponent.astro";
+import Footer2 from "../components/Footer2.astro";
 ---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Shiva Designing Studio</title>
+  </head>
+  <body>
+<Header2 />
+<GalleryComponent/>
+<Footer2/>
 
-<Layout>
-  <Fragment slot="head-extra">
-    <link rel="stylesheet" href="/gallery-css/filtered.css" />
-    <!-- <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/style.css" /> -->
-  </Fragment>
-  
-    <Hero />
-  <Test />
-  <JsWrapper/>
-  <div class="content-wrapper">
-    <Footer />
-  </div>
-</Layout>
+</body>
+</html>
+
