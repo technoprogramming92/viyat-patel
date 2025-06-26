@@ -56,7 +56,7 @@ interface GalleryImage {
               <a href={image.fullSize} title={image.title}>
                 <figure>
                   {/* The 'src' for the thumbnail, 'alt' for accessibility */}
-                  <img alt={image.title} src={image.thumbnail}>
+                  <img alt={image.title} src={image.fullSize}>
                   <figcaption>
                     <h3 class="project-title">
                       {image.title.split('<br>').map((line, index) => (
@@ -66,9 +66,9 @@ interface GalleryImage {
                         </Fragment>
                       ))}
                     </h3>
-                    <h4 class="project-category">
+                  {/* <h4 class="project-category">
                       {image.category}
-                    </h4>
+                    </h4> */}  
                     <div class="project-zoom"></div>
                   </figcaption>
                 </figure>
