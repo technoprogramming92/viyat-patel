@@ -1,0 +1,18 @@
+# .github/workflows/daily-gallery-update.yml
+
+name: Daily Google Drive Gallery Update
+
+on:
+  # Schedule this workflow to run daily at 00:00 UTC (or adjust as needed)
+  schedule:
+    - cron: '0 */6 * * *' # Runs at every hour
+
+  # You can also add a workflow_dispatch to manually trigger it from GitHub Actions tab
+  workflow_dispatch:
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel Build Hook
+        run: curl -X POST ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
