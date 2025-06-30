@@ -1,0 +1,192 @@
+/* src/styles/gallery-effects.css */
+
+.project{
+  padding: 0;
+  overflow: hidden;
+}
+
+.project figure{
+  margin: 0; /* Add this to reset default browser margin for figure */
+  padding: 0; /* Ensure no unwanted padding */
+  position: relative;
+}
+
+.project figure img{
+  display: block;
+  width: 100%;
+  -webkit-transition: all 8s linear;
+  -o-transition: all 8s linear;
+  transition: all 8s linear;
+}
+
+.project figure:after{
+  content:'';
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background-color: #111;
+  opacity: 0.7;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.project.project-light figure:after{
+  opacity: 0.4;
+}
+
+.project figcaption{
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top:0;
+  right:0;
+  bottom:0;
+  margin: 3.2em 3.6em;
+}
+
+.project-title{
+  position: relative;
+  top:0;
+  left:0;
+  margin:0;
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+  font-size: 1.56em;
+  line-height: 1.45;
+  letter-spacing: 0.07em;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.project-category{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin:0 0 -0.8em;
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 0.8em;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.project-zoom{
+  position: absolute;
+  left: 50%;
+  top:50%;
+  width: 9em;
+  height: 9em;
+  margin:-4.5em;
+  border-radius: 50%;
+  background-color: rgba(197,164,126,0.84);
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+  -ms-transform:scale(0.5);
+  -o-transform:scale(0.5);
+  transform:scale(0.5);
+  -webkit-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.project-zoom:after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  top:50%;
+  width: 2.625em;
+  height:2.625em;
+  background:url(../img/img-icon/zoom.png) 0 0 no-repeat;
+  background-size: cover;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.project figure:hover:after{
+  opacity: 0;
+}
+
+.project figure:hover img{
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4);
+}
+
+.project figure:hover .project-title{
+  top:30px;
+  opacity: 0;
+}
+
+.project figure:hover .project-category{
+  opacity: 0;
+  letter-spacing: 2em;
+}
+
+.project figure:hover .project-zoom{
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform:scale(1);
+  -o-transform:scale(1);
+  transform:scale(1);
+}
+
+
+
+
+/* Gemini generated */
+
+/* Add this to your existing CSS file (e.g., src/styles/gallery-effects.css or similar) */
+
+/* Apply spacing after each row starting from medium-sized screens (tablets in landscape, desktops) */
+@media (min-width: 768px) { /* This corresponds to Bootstrap's 'md' breakpoint */
+    .row {
+        margin-bottom: 2rem; /* Adds 2rem (approx. 32px) of space below each row */
+    }
+}
+
+/* Optional: If you want *different* or *more* spacing only on larger desktops */
+/*
+@media (min-width: 992px) { // This corresponds to Bootstrap's 'lg' breakpoint
+    .row {
+        margin-bottom: 3rem; // Example: adds 3rem (approx. 48px) of space below each row
+    }
+}
+*/
+
+
+
+/* Add this to your gallery-effect.css file */
+
+/* Remove Bootstrap's default horizontal padding from gallery columns on mobile */
+@media (max-width: 575.98px) { /* Targets extra-small screens (mobile portrait) */
+    .project.col-12 { /* Apply specifically to your gallery items that are full width on mobile */
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+/* Optional: If you also want to remove padding for small screens (col-sm-6) */
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .project.col-sm-6 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
