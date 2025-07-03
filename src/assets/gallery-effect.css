@@ -146,3 +146,25 @@
   -o-transform:scale(1);
   transform:scale(1);
 }
+
+
+/* Gemini padding */
+
+/* Add these rules to the end of your gallery-effects.css file */
+
+/* 1. Spacing around images in desktop/tablet view */
+@media (min-width: 576px) { /* Applies from small screens (tablets) and up */
+    .project {
+        /* This adds 15px of padding on all sides *inside* each gallery item's container.
+           This creates the visual space "between" items and from the column edges. */
+        padding: 15px; /* Adjust this value as needed (e.g., 10px, 20px) */
+    }
+}
+
+/* 2. Spacing below images in mobile view (when they stack) */
+@media (max-width: 767.98px) { /* Applies to extra-small (XS) and small (SM) screens */
+    .project {
+        /* This adds 1.5rem (approx. 24px) of space below each gallery item when they are stacked vertically. */
+        margin-bottom: 1.5rem; /* Adjust this value as needed (e.g., 1rem, 20px) */
+    }
+}
