@@ -1,0 +1,129 @@
+/* --- Global Body & Font Settings (Influences overall text rendering) --- */
+body {
+    background-color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+    color: #6a6a6a;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+/* --- .container (Bootstrap Grid Container) --- */
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative; /* Added in theme, might be for z-index or children positioning */
+    max-width: 1200px; /* Specific max-width for this theme's container */
+}
+@media (min-width: 768px) { /* Medium screens and up */
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) { /* Large screens and up */
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) { /* Extra-large screens and up */
+    .container {
+        width: 1170px;
+    }
+}
+
+/* --- Main Section (.main, Hero Banner Styles) --- */
+.main {
+    position: relative;
+    padding: 17em 0 16em; /* Top and bottom padding for the hero section */
+    color: #fff; /* Text color inside this section */
+    overflow: hidden; /* Important for background effects */
+}
+
+.main.main-inner { /* Specific padding for inner pages */
+    padding: 11.2em 0 8.6em;
+}
+
+.main.main-projects { /* Specific padding for project pages, same as main-inner here */
+    padding: 11.2em 0 8.6em;
+}
+
+.main.bg-projects { /* Background image for the hero banner */
+    background-image: url(../img/bg-projects.jpg);
+    background-position: 50% 50%;
+    background-size: cover; /* Ensures the image covers the entire section */
+}
+
+/* --- Main Header (h1 wrapper within the banner) --- */
+.main-header {
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.main-header.main-header-sm { /* Smaller margin for smaller headers */
+    margin-bottom: 1.5em;
+}
+
+/* --- h1 (Page Title within the Main Header) --- */
+.main-header h1 {
+    position: relative;
+    top: 0.05em;
+    left: 0;
+    margin: 0;
+    font-family: 'Oswald', sans-serif; /* Specific font for the title */
+    font-weight: normal;
+    font-size: 3.57em; /* Initial font size for mobile */
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #fff; /* White text color */
+    text-transform: uppercase;
+    opacity: 1;
+}
+.main-header h1 span { /* Styling for a span within the h1 (e.g., if part of title is bold) */
+    font-weight: bold;
+}
+.main-header.main-header-sm h1 { /* Smaller font size for smaller headers */
+    font-size: 2.5em;
+}
+@media (min-width: 768px) { /* Adjust h1 font size for larger screens */
+    .main-header h1 {
+        font-size: 5.4em;
+    }
+}
+
+/* --- Page Lines (The vertical lines on the banner) --- */
+.page-lines {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.page-lines .container { /* Specific container styles within page-lines */
+    height: 100%;
+    max-width: 1200px; /* Ensure it respects overall max-width */
+    padding: 0; /* Remove container padding for lines */
+}
+.page-lines .col-line { /* Wrapper for each vertical line column */
+    position: relative;
+    height: 100%;
+}
+.page-lines .col-line .line { /* The actual vertical line */
+    width: 1px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    margin: 0 auto; /* Center the line horizontally */
+}
+.page-lines .col-line .line + .line { /* Spacing between multiple lines within a col-line */
+    margin-top: 5em;
+}
+
+/* --- .layout (General wrapper for content below the hero banner) --- */
+.layout {
+    position: relative;
+    z-index: 1; /* Ensures this content appears above the banner lines if they overlap */
+    background-image:url("../../public/img/projects.jpg"); /* White background for the main content area */
+}
